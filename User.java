@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class User implements Comparable <User>{
+public class User{
    private String firstName;
    private String secondName;
    private String phoneNumber;
