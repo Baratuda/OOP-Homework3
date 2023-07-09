@@ -46,13 +46,10 @@ public User(String firstName, String secondName, String phoneNumber, int age) {
       this.age = age;
    }
    
-   @Override
-   public int compareTo(User o){
-       Scanner sc = new Scanner(System.in);
-       System.out.println("Please select: \n 1) Sort by 'first Name'; \n2) Sort by 'second name'; \n3) Sort by 'phone number'; \n4) Sort by 'age'; \n");
-       String option = sc.nextLine();
-       int result = 0;
-       switch (option) {
+   
+   public int sortusers(User o, String option){
+      int result = 0;
+     switch (option) {
          case "1":
             result = this.firstName.compareTo(o.getFirstName());
             break;
