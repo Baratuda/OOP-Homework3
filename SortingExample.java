@@ -8,7 +8,7 @@ public class SortingExample{
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please select: \n 1) Sort by 'first Name'; \n2) Sort by 'second name'; \n3) Sort by 'phone number'; \n4) Sort by 'age'; \n");
+        System.out.println("Please select: \n1) Sort by 'first Name'; \n2) Sort by 'second name'; \n3) Sort by 'phone number'; \n4) Sort by 'age'; \n");
         String option = sc.nextLine();
         List<User> users = new ArrayList<>();
         users.add(new User("Олег","Невзоров","+375445476534",25));
@@ -17,8 +17,8 @@ public class SortingExample{
         users.add(new User("Кристина","Фамина","+375445476537",19));
         users.add(new User("Марина","Баранова","+375445476538",34));
         Comparator<User> comparator = (a, b) -> a.sortusers(b,option);
-        List<User> sortedUsers = soringList(users, comparator);
-        System.out.println(sortedUsers);
+        soringList(users, comparator).stream().forEach(System.out::println);
+    
 
         
     }
