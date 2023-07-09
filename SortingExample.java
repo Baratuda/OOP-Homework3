@@ -15,7 +15,9 @@ public class SortingExample{
         users.add(new User("Кристина","Фамина","+375445476537",19));
         users.add(new User("Марина","Баранова","+375445476538",34));
         Comparator<User> comparator = (a, b) -> a.compareTo(b);
-        for(User i: soringList(users, comparator))
-           System.out.println(i); 
+        List<User> sortedUsers = soringList(users, comparator);
+        System.out.println(sortedUsers);
+
+        
     }
 }
